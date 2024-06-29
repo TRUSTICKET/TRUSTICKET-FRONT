@@ -1,0 +1,11 @@
+<div style="margin:auto; text-align:center">
+    <h1>예매 시도중</h1>
+    <img width="300" height="300"  src="assets/img/wait.gif">
+    <div mat-dialog-content>
+      <p>Please wait while we process your booking...</p>
+      <p>앞에 {{waitingNo}} 명의 대기자가 있습니다.</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="cancel();">대기열 이탈</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div>
+      <input id="search-keyword" [(ngModel)]="searchKeyword" placeholder="Enter search keyword">
+      <button (click)="search()">Search</button>
+    </div>
+    <hr><br><hr>
+    <div [class]="'row row-cols-md-' + prefix">
+      <div *ngFor="let board of boards">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img width=100% height="220" src="{{loadImg(board.thumbnailImage)}}">
+            <div class="card-body">
+              <p class="card-text" style="text-align:center; font-weight:bold; font-size: 20px">{{board.title}}</p>
+              <p class="card-text"><b>시간 : </b>{{board.schedule}}</p>
+              <p class="card-text"><b>장소: </b>{{board.place}}</p>
+              <p class="card-text"><b>예매 시작 : </b>{{board.startDate}}</p>
+              <p class="card-text"><b>예매 종료 : </b>{{board.endDate}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="detail_view(board.id);">세부사항!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ngb-pagination [collectionSize]="pager.collectionSize" [pageSize]="pager.pageSize" [(page)]="pager.page" [maxSize]="pager.maxSize" (pageChange)="pageChanged($event)" aria-label="Default pagination"></ngb-pagination>
+

@@ -1,0 +1,58 @@
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+
+      <b>TRUSTICKET</b>
+
+      <a href="#" class="navbar-brand d-flex align-items-center justify-content-center">
+        <span style="text-align: center;">
+          <h2>TRUSTICKET</h2>
+          <span class="text-white me-2" style="font-size: 13px;">{{ authService.nick }}님 환영합니다</span>
+          <button class="btn btn-sm btn-primary" (click)="logOut()">로그아웃</button>
+        </span>
+      
+      </a>
+      
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+  <div class="collapse bg-light" id="navbarHeader">
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h5 class="text-white">Author : Jaewhi-so</h5>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Content</h4>
+          <ul class="list-unstyled">
+            <li><a routerLink="/" routerLinkActive="active">메인</a></li>
+            <li><a routerLink="/board" routerLinkActive="active">이벤트 목록</a></li>
+            <li><a routerLink="/account" routerLinkActive="active">회원가입</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a class="nav-link" routerLink="/" routerLinkActive="active">메인</a></li>
+          <li class="nav-item active"><a class="nav-link" routerLink="/board" routerLinkActive="active">이벤트 목록</a></li>
+          <li class="nav-item active"><a class="nav-link" routerLink="/myticket" routerLinkActive="active">내 티켓</a></li>
+          <li class="nav-item active"><a class="nav-link" routerLink="/account" routerLinkActive="active">회원가입</a></li>
+        </ul>
+      </div>
+      <!-- 오른쪽으로 정렬 -->
+      <div class="text-end"> <!-- ms-auto를 사용하여 오른쪽으로 정렬 -->
+
+      </div>
+    </nav>
+  </div>
+</header>
